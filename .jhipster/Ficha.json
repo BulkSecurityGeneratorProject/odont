@@ -1,0 +1,42 @@
+{
+    "name": "Ficha",
+    "fields": [
+        {
+            "fieldName": "month",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "urgency",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "paciente",
+            "otherEntityName": "paciente",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "fichaDetalle",
+            "otherEntityRelationshipName": "ficha",
+            "relationshipName": "detalles"
+        },
+        {
+            "relationshipName": "planilla",
+            "otherEntityName": "planilla",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190614024901",
+    "entityTableName": "ficha",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

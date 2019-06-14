@@ -1,0 +1,24 @@
+{
+    "name": "Diente",
+    "fields": [
+        {
+            "fieldName": "cara",
+            "fieldType": "Cara",
+            "fieldValues": "VESTIBULAR,DISTAL,MESIAL,OCLUSAL,INCISAL,PALATINO,LINGUAL"
+        },
+        {
+            "fieldName": "numero",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190614024859",
+    "entityTableName": "diente",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

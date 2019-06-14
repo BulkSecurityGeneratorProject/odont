@@ -1,0 +1,22 @@
+{
+  "odontApp": {
+    "diente": {
+      "home": {
+        "title": "Dientes",
+        "createLabel": "Create a new Diente",
+        "createOrEditLabel": "Create or edit a Diente"
+      },
+      "created": "A new Diente is created with identifier {{ param }}",
+      "updated": "A Diente is updated with identifier {{ param }}",
+      "deleted": "A Diente is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Diente {{ id }}?"
+      },
+      "detail": {
+        "title": "Diente"
+      },
+      "cara": "Cara",
+      "numero": "Numero"
+    }
+  }
+}

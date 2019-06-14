@@ -1,0 +1,26 @@
+{
+  "odontApp": {
+    "obraSocial": {
+      "home": {
+        "title": "Obra Socials",
+        "createLabel": "Create a new Obra Social",
+        "createOrEditLabel": "Create or edit a Obra Social"
+      },
+      "created": "A new Obra Social is created with identifier {{ param }}",
+      "updated": "A Obra Social is updated with identifier {{ param }}",
+      "deleted": "A Obra Social is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Obra Social {{ id }}?"
+      },
+      "detail": {
+        "title": "Obra Social"
+      },
+      "name": "Name",
+      "description": "Description",
+      "dentista": "Dentista",
+      "pacientes": "Pacientes",
+      "tratamientos": "Tratamientos",
+      "planillas": "Planillas"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="ficha">
+            <h2><span jhiTranslate="odontApp.ficha.detail.title">Ficha</span> {{ficha.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="odontApp.ficha.month">Month</span></dt>
+                <dd>
+                    <span>{{ficha.month}}</span>
+                </dd>
+                <dt><span jhiTranslate="odontApp.ficha.urgency">Urgency</span></dt>
+                <dd>
+                    <span>{{ficha.urgency}}</span>
+                </dd>
+                <dt><span jhiTranslate="odontApp.ficha.paciente">Paciente</span></dt>
+                <dd>
+                    <div *ngIf="ficha.pacienteId">
+                        <a [routerLink]="['/paciente', ficha.pacienteId, 'view']">{{ficha.pacienteId}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="odontApp.ficha.planilla">Planilla</span></dt>
+                <dd>
+                    <div *ngIf="ficha.planillaId">
+                        <a [routerLink]="['/planilla', ficha.planillaId, 'view']">{{ficha.planillaId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/ficha', ficha.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-ficha-detalle-heading" jhiTranslate="odontApp.fichaDetalle.home.createOrEditLabel">Create or edit a Ficha Detalle</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!fichaDetalle.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="odontApp.fichaDetalle.ficha" for="field_ficha">Ficha</label>
+                    <select class="form-control" id="field_ficha" name="ficha" formControlName="fichaId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="fichaOption.id" *ngFor="let fichaOption of fichas; trackBy: trackFichaById">{{fichaOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="odontApp.fichaDetalle.tratamiento" for="field_tratamiento">Tratamiento</label>
+                    <select class="form-control" id="field_tratamiento" name="tratamiento" formControlName="tratamientoId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="tratamientoOption.id" *ngFor="let tratamientoOption of tratamientos; trackBy: trackTratamientoById">{{tratamientoOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="odontApp.fichaDetalle.diente" for="field_diente">Diente</label>
+                    <select class="form-control" id="field_diente" name="diente" formControlName="dienteId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="dienteOption.id" *ngFor="let dienteOption of dientes; trackBy: trackDienteById">{{dienteOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

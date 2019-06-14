@@ -1,0 +1,23 @@
+{
+  "odontApp": {
+    "fichaDetalle": {
+      "home": {
+        "title": "Ficha Detalles",
+        "createLabel": "Crear nuevo Ficha Detalle",
+        "createOrEditLabel": "Crear o editar Ficha Detalle"
+      },
+      "created": "Un nuevo Ficha Detalle ha sido creado con el identificador {{ param }}",
+      "updated": "Un Ficha Detalle ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Ficha Detalle ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Ficha Detalle {{ id }}?"
+      },
+      "detail": {
+        "title": "Ficha Detalle"
+      },
+      "ficha": "Ficha",
+      "tratamiento": "Tratamiento",
+      "diente": "Diente"
+    }
+  }
+}

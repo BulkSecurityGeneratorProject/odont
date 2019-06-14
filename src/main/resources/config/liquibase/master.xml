@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="now" value="now()" dbms="mysql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql, mariadb"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614024855_added_entity_Paciente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614024856_added_entity_Dentista.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614024857_added_entity_ObraSocial.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614024858_added_entity_Tratamiento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614024859_added_entity_Diente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614024900_added_entity_Precio.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614024901_added_entity_Ficha.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614024902_added_entity_FichaDetalle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614024903_added_entity_Planilla.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20190614024855_added_entity_constraints_Paciente.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614024857_added_entity_constraints_ObraSocial.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614024858_added_entity_constraints_Tratamiento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614024901_added_entity_constraints_Ficha.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614024902_added_entity_constraints_FichaDetalle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614024903_added_entity_constraints_Planilla.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190614043249_changelog.xml" relativeToChangelogFile="false"/>
+
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

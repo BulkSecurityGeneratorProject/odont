@@ -1,0 +1,14 @@
+{
+  "odontApp": {
+    "Cara": {
+      "null": "",
+      "VESTIBULAR": "VESTIBULAR",
+      "DISTAL": "DISTAL",
+      "MESIAL": "MESIAL",
+      "OCLUSAL": "OCLUSAL",
+      "INCISAL": "INCISAL",
+      "PALATINO": "PALATINO",
+      "LINGUAL": "LINGUAL"
+    }
+  }
+}

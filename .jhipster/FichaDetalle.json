@@ -1,0 +1,37 @@
+{
+    "name": "FichaDetalle",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipName": "ficha",
+            "otherEntityName": "ficha",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "tratamiento",
+            "otherEntityRelationshipName": "fichaDetalle",
+            "relationshipName": "tratamiento",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "diente",
+            "otherEntityRelationshipName": "fichaDetalle",
+            "relationshipName": "diente",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190614024902",
+    "entityTableName": "ficha_detalle",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

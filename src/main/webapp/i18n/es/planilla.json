@@ -1,0 +1,24 @@
+{
+  "odontApp": {
+    "planilla": {
+      "home": {
+        "title": "Planillas",
+        "createLabel": "Crear nuevo Planilla",
+        "createOrEditLabel": "Crear o editar Planilla"
+      },
+      "created": "Un nuevo Planilla ha sido creado con el identificador {{ param }}",
+      "updated": "Un Planilla ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Planilla ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Planilla {{ id }}?"
+      },
+      "detail": {
+        "title": "Planilla"
+      },
+      "fechaDesde": "Fecha Desde",
+      "fechaHasta": "Fecha Hasta",
+      "obraSocial": "Obra Social",
+      "fichas": "Fichas"
+    }
+  }
+}

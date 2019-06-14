@@ -1,0 +1,24 @@
+{
+  "odontApp": {
+    "precio": {
+      "home": {
+        "title": "Precios",
+        "createLabel": "Create a new Precio",
+        "createOrEditLabel": "Create or edit a Precio"
+      },
+      "created": "A new Precio is created with identifier {{ param }}",
+      "updated": "A Precio is updated with identifier {{ param }}",
+      "deleted": "A Precio is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Precio {{ id }}?"
+      },
+      "detail": {
+        "title": "Precio"
+      },
+      "idTratamiento": "Id Tratamiento",
+      "precio": "Precio",
+      "fechaDesde": "Fecha Desde",
+      "fechaHasta": "Fecha Hasta"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "odontApp": {
+    "dentista": {
+      "home": {
+        "title": "Dentistas",
+        "createLabel": "Create a new Dentista",
+        "createOrEditLabel": "Create or edit a Dentista"
+      },
+      "created": "A new Dentista is created with identifier {{ param }}",
+      "updated": "A Dentista is updated with identifier {{ param }}",
+      "deleted": "A Dentista is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Dentista {{ id }}?"
+      },
+      "detail": {
+        "title": "Dentista"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "matricula": "Matricula",
+      "obrasSociales": "Obras Sociales"
+    }
+  }
+}

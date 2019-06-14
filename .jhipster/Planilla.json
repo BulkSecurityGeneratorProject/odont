@@ -1,0 +1,36 @@
+{
+    "name": "Planilla",
+    "fields": [
+        {
+            "fieldName": "fechaDesde",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "fechaHasta",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "obraSocial",
+            "otherEntityName": "obraSocial",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "ficha",
+            "otherEntityRelationshipName": "planilla",
+            "relationshipName": "fichas"
+        }
+    ],
+    "changelogDate": "20190614024903",
+    "entityTableName": "planilla",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

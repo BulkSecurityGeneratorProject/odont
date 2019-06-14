@@ -1,0 +1,34 @@
+{
+    "name": "Dentista",
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "matricula",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "obraSocial",
+            "otherEntityRelationshipName": "dentista",
+            "relationshipName": "obrasSociales"
+        }
+    ],
+    "changelogDate": "20190614024856",
+    "entityTableName": "dentista",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

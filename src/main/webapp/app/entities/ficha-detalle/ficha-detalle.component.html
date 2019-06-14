@@ -1,0 +1,70 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="odontApp.fichaDetalle.home.title">Ficha Detalles</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-ficha-detalle" [routerLink]="['/ficha-detalle/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="odontApp.fichaDetalle.home.createLabel">
+            Create new Ficha Detalle
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="fichaDetalles">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="odontApp.fichaDetalle.ficha">Ficha</span></th>
+            <th><span jhiTranslate="odontApp.fichaDetalle.tratamiento">Tratamiento</span></th>
+            <th><span jhiTranslate="odontApp.fichaDetalle.diente">Diente</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let fichaDetalle of fichaDetalles ;trackBy: trackId">
+                <td><a [routerLink]="['/ficha-detalle', fichaDetalle.id, 'view' ]">{{fichaDetalle.id}}</a></td>
+                <td>
+                    <div *ngIf="fichaDetalle.fichaId">
+                        <a [routerLink]="['../ficha', fichaDetalle.fichaId , 'view' ]" >{{fichaDetalle.fichaId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="fichaDetalle.tratamientoId">
+                        <a [routerLink]="['../tratamiento', fichaDetalle.tratamientoId , 'view' ]" >{{fichaDetalle.tratamientoId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="fichaDetalle.dienteId">
+                        <a [routerLink]="['../diente', fichaDetalle.dienteId , 'view' ]" >{{fichaDetalle.dienteId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/ficha-detalle', fichaDetalle.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/ficha-detalle', fichaDetalle.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'ficha-detalle', { outlets: { popup: fichaDetalle.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

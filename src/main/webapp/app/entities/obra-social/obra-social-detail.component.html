@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="obraSocial">
+            <h2><span jhiTranslate="odontApp.obraSocial.detail.title">Obra Social</span> {{obraSocial.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="odontApp.obraSocial.name">Name</span></dt>
+                <dd>
+                    <span>{{obraSocial.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="odontApp.obraSocial.description">Description</span></dt>
+                <dd>
+                    <span>{{obraSocial.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="odontApp.obraSocial.dentista">Dentista</span></dt>
+                <dd>
+                    <div *ngIf="obraSocial.dentistaId">
+                        <a [routerLink]="['/dentista', obraSocial.dentistaId, 'view']">{{obraSocial.dentistaId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/obra-social', obraSocial.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

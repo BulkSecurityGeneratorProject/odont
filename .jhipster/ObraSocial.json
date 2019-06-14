@@ -1,0 +1,51 @@
+{
+    "name": "ObraSocial",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "dentista",
+            "otherEntityName": "dentista",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "paciente",
+            "otherEntityRelationshipName": "obraSocial",
+            "relationshipName": "pacientes"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "tratamiento",
+            "otherEntityRelationshipName": "obraSocial",
+            "relationshipName": "tratamientos"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "planilla",
+            "otherEntityRelationshipName": "obraSocial",
+            "relationshipName": "planillas"
+        }
+    ],
+    "changelogDate": "20190614024857",
+    "entityTableName": "obra_social",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

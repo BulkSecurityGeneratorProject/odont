@@ -1,0 +1,27 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <changeSet author="tomas (generated)" id="1560486817826-5">
+        <createTable tableName="jhi_user_obras_sociales">
+            <column name="user_id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="obras_sociales_id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="tomas (generated)" id="1560486817826-6">
+        <addColumn tableName="jhi_user">
+            <column name="matricula" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="tomas (generated)" id="1560486817826-7">
+        <addUniqueConstraint columnNames="obras_sociales_id" constraintName="UK_gp0jhiqc3iiq355lxo4n3hfny" tableName="jhi_user_obras_sociales"/>
+    </changeSet>
+    <changeSet author="tomas (generated)" id="1560486817826-8">
+        <addForeignKeyConstraint baseColumnNames="obras_sociales_id" baseTableName="jhi_user_obras_sociales" constraintName="FK222v48pg25a2qyhp8nnfeha8h" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="obra_social" validate="true"/>
+    </changeSet>
+    <changeSet author="tomas (generated)" id="1560486817826-9">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="jhi_user_obras_sociales" constraintName="FKoj7y7ft43tri7v81mmln7oef7" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="jhi_user" validate="true"/>
+    </changeSet>
+</databaseChangeLog>

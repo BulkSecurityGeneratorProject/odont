@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.control.shift",
+      "nativeLanguage": "es"
+    },
+    "jhipsterVersion": "6.0.1",
+    "applicationType": "monolith",
+    "baseName": "odont",
+    "packageName": "com.control.shift",
+    "packageFolder": "com/control/shift",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YTU2ODZhNGZmNzA0MjljYjAwNzMyYzY0M2FmNTkzYjJlZmY2MDFjZTFiOTM0Mjg2M2FjMWU2NDJiYjcxM2M1YmE2NDkxYTY1ZTE4ZDhhYjBiYzU4NmVlZjgyZGEzZDJkZWZjMjkxYTIwOTUyMTI3MmUzNjQwNTQ3NDY1YzZkMGM=",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "es",
+    "languages": ["es", "en"]
+  }
+}

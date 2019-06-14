@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="planilla">
+            <h2><span jhiTranslate="odontApp.planilla.detail.title">Planilla</span> {{planilla.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="odontApp.planilla.fechaDesde">Fecha Desde</span></dt>
+                <dd>
+                    <span>{{planilla.fechaDesde}}</span>
+                </dd>
+                <dt><span jhiTranslate="odontApp.planilla.fechaHasta">Fecha Hasta</span></dt>
+                <dd>
+                    <span>{{planilla.fechaHasta}}</span>
+                </dd>
+                <dt><span jhiTranslate="odontApp.planilla.obraSocial">Obra Social</span></dt>
+                <dd>
+                    <div *ngIf="planilla.obraSocialId">
+                        <a [routerLink]="['/obra-social', planilla.obraSocialId, 'view']">{{planilla.obraSocialId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/planilla', planilla.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

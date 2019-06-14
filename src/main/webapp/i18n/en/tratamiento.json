@@ -1,0 +1,24 @@
+{
+  "odontApp": {
+    "tratamiento": {
+      "home": {
+        "title": "Tratamientos",
+        "createLabel": "Create a new Tratamiento",
+        "createOrEditLabel": "Create or edit a Tratamiento"
+      },
+      "created": "A new Tratamiento is created with identifier {{ param }}",
+      "updated": "A Tratamiento is updated with identifier {{ param }}",
+      "deleted": "A Tratamiento is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tratamiento {{ id }}?"
+      },
+      "detail": {
+        "title": "Tratamiento"
+      },
+      "code": "Code",
+      "description": "Description",
+      "precio": "Precio",
+      "obraSocial": "Obra Social"
+    }
+  }
+}

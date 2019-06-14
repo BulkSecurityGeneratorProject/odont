@@ -1,0 +1,29 @@
+{
+  "odontApp": {
+    "paciente": {
+      "home": {
+        "title": "Pacientes",
+        "createLabel": "Crear nuevo Paciente",
+        "createOrEditLabel": "Crear o editar Paciente"
+      },
+      "created": "Un nuevo Paciente ha sido creado con el identificador {{ param }}",
+      "updated": "Un Paciente ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Paciente ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Paciente {{ id }}?"
+      },
+      "detail": {
+        "title": "Paciente"
+      },
+      "identifier": "Identifier",
+      "firtsName": "Firts Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "address": "Address",
+      "phone": "Phone",
+      "birthDate": "Birth Date",
+      "fichas": "Fichas",
+      "obraSocial": "Obra Social"
+    }
+  }
+}
